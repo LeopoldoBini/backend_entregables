@@ -1,6 +1,5 @@
 const express = require("express");
 const fs = require("fs");
-const { engine } = require("express-handlebars");
 
 const Contenedor = class {
   constructor(nombreArchivo) {
@@ -96,38 +95,25 @@ const Contenedor = class {
   }
 };
 const productos1 = new Contenedor("lista1");
-
 productos1.getAll()
-
-
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use(express.static("public"));
-
 app.set("views", "./src/views");
-app.set("view engine", "hbs");
+app.set("view engine", "pug");
 
-app.engine(
-  "hbs",
-  engine({
-    extname: ".hbs",
-    defaultLayout: "index.hbs",
-    layoutsDir: __dirname + "/views/layout",
-    partialsDir: __dirname + "/views/partials",
-  }),
-);
 
 app.get("/", (req, res) => {
-  res.status(200).render("main", {});
+  res.render("index", {});
 });
+
 app.get("/listaProductos", (req, res) => {
   const stringyProducts = productos1.productos.map((prod) => {
     return {stringyProduct : JSON.stringify(prod)}
   })
-  res.status(200).render("listaDeProductos", {
+  res.status(200).render("vistaDeProductos", {
     productos : stringyProducts,
   });
 });
@@ -137,18 +123,19 @@ app.post("/productos", (req, res) => {
   try {
     const id = productos1.save(body);
     const mensaje = (`Producto agregado con exito, id: ${id}`)
-    res.status(200).render("main", {
+    res.status(200).render("index", {
       mensaje
     });
   }catch(err){
-    res.status(200).render("main", {
+    res.status(200).render("index", {
       mensaje : err
     });
   }
   
 });
 
-const PORT = 1000;
+
+const PORT = 8080;
 const server = app.listen(PORT, () =>
   console.log(`🚀 Server started on port http://localhost:${PORT}`),
 );

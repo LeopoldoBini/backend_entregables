@@ -1,0 +1,12 @@
+form(action="/productos" method="post")
+    h3 Valores del producto Nuevo:
+    div.mb-3
+        label(for="productName").form-label Tiulo 
+        input(type="text" name="title" id="productName").form-control 
+    div.mb-3
+        label(for="productName").form-label precio 
+        input(type="number" name="price" id="precio").form-control 
+    div.mb-3
+        label(for="productName").form-label thumbnail 
+        input(type="text" name="thumbnail" id="imagenURL").form-control 
+    button(type="submit" class="btn btn-primary") Agregar Producto
