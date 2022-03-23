@@ -1,6 +1,14 @@
 const express = require("express");
+const http = require('http')
 const fs = require("fs");
 const { engine } = require("express-handlebars");
+const app = express();
+const server = http.createServer(app)
+const { Server } = require('socket.io')
+const io = new Server(server)
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 const ContenedorProductos = class {
   constructor(nombreArchivo) {
@@ -11,24 +19,17 @@ const ContenedorProductos = class {
     this.productos = [];
   }
   getAll() {
-    if (fs.existsSync(this.path)) {
+    try {
       const data = fs.readFileSync(this.path, "utf-8");
       const parsedData = JSON.parse(data);
-      if (Array.isArray(parsedData)) {
-        if (parsedData.length > 0) { 
-          this.idList = parsedData.reduce((a, b) => [...a, b.id], []);;
-          
-          this.lastId = Math.max(...this.idList);
-
-          this.productos = parsedData;
-        }
-        return parsedData;
-      } else {
-        fs.writeFileSync(this.path, "[]");
-        return [];
-      }
-    } else {
+      console.log(data);
+      this.idList = parsedData.reduce((a, b) => [...a, b.id], []);
+      this.lastId = Math.max(...this.idList);
+      this.productos = parsedData;
+      return parsedData;
+    } catch (er) {
       fs.writeFileSync(this.path, "[]");
+      console.log(er);
       return [];
     }
   }
@@ -45,7 +46,7 @@ const ContenedorProductos = class {
       this.writeProductosOnFile();
       return producto.id;
     } else {
-      throw new Error("Se requieren todos los campos")
+      throw new Error("Se requieren todos los campos");
     }
   }
   getByid(id) {
@@ -66,13 +67,15 @@ const ContenedorProductos = class {
       title ? (this.productos[indexToReWrite].title = title) : "";
       price ? (this.productos[indexToReWrite].price = price) : "";
       thumbnail ? (this.productos[indexToReWrite].thumbnail = thumbnail) : "";
-        console.log(this.productos[indexToReWrite])
+      console.log(this.productos[indexToReWrite]);
       this.writeProductosOnFile();
-      return{
-          mensaje : 'producto actualizado',
-          producto : this.productos[indexToReWrite]
-      }
-    }else{'no tenemos ese producto'}
+      return {
+        mensaje: "producto actualizado",
+        producto: this.productos[indexToReWrite],
+      };
+    } else {
+      ("no tenemos ese producto");
+    }
   }
   deleteById(id) {
     this.getAll();
@@ -80,9 +83,9 @@ const ContenedorProductos = class {
       const filteredList = this.productos.filter((prod) => prod.id != id);
       fs.writeFileSync(this.path, JSON.stringify(filteredList));
       this.getAll();
-      return "Producto eliminado"
-    }else{
-        return "no tenemos ese producto"
+      return "Producto eliminado";
+    } else {
+      return "no tenemos ese producto";
     }
   }
   deleteAll() {
@@ -102,24 +105,17 @@ const ContenedorMensajes = class {
     this.mensajes = [];
   }
   getAll() {
-    if (fs.existsSync(this.path)) {
+    try {
       const data = fs.readFileSync(this.path, "utf-8");
       const parsedData = JSON.parse(data);
-      if (Array.isArray(parsedData)) {
-        if (parsedData.length > 0) { 
-          this.idList = parsedData.reduce((a, b) => [...a, b.id], []);;
-          
-          this.lastId = Math.max(...this.idList);
-
-          this.productos = parsedData;
-        }
-        return parsedData;
-      } else {
-        fs.writeFileSync(this.path, "[]");
-        return [];
-      }
-    } else {
+      console.log(data);
+      this.idList = parsedData.reduce((a, b) => [...a, b.id], []);
+      this.lastId = Math.max(...this.idList);
+      this.mensajes = parsedData;
+      return parsedData;
+    } catch (er) {
       fs.writeFileSync(this.path, "[]");
+      console.log(er);
       return [];
     }
   }
@@ -128,25 +124,49 @@ const ContenedorMensajes = class {
     fs.writeFileSync(this.path, strigyList);
   }
   save(mensajes) {
-      this.getAll();
-      this.lastId++;
-      mensajes.id = this.lastId;
-      this.mensajes.push(mensajes);
-      this.writeMsgOnFile();
+    this.getAll();
+    this.lastId++;
+    mensajes.id = this.lastId;
+    this.mensajes.push(mensajes);
+    this.writeMsgOnFile();
   }
-}
+};
 const productos1 = new ContenedorProductos("lista1");
-const generalMsgs = new ContenedorMensajes("gralMsg")
-
-productos1.getAll()
-generalMsgs.getAll()
+const generalMsgs = new ContenedorMensajes("gralMsg");
 
 
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+productos1.getAll();
+generalMsgs.getAll();
 
-app.use(express.static("public"));
+
+const usuariosConectados = []
+const todosLosMensajes = []
+
+io.on('connection' , (socket) =>{
+  usuariosConectados.push(socket.id) 
+  console.log(`💻 nuevo usuario conectado, Total: ${usuariosConectados.length}`, usuariosConectados)
+  
+  socket.emit('MensajeConexion' , 'Bienvenido ♥')
+  socket.emit('todosLosMensajes' , todosLosMensajes)
+
+
+
+  socket.on('MensajeDesdeClienteAlConectarse' , (d) => {
+    console.log(d)
+  })
+  socket.on('inputChatCliente', (fullMessage) => {
+    todosLosMensajes.push(fullMessage)
+    io.sockets.emit('todosLosMensajes' , todosLosMensajes)
+    console.log('Estos son todos los Mensajes =>', todosLosMensajes)
+  })
+
+
+  socket.on('disconnect' , () =>{
+    console.log('❌ Usuario desconectado')
+    usuariosConectados.splice(socket.id)
+  })
+})
+
 
 app.set("views", "./src/views");
 app.set("view engine", "hbs");
@@ -158,39 +178,33 @@ app.engine(
     defaultLayout: "index.hbs",
     layoutsDir: __dirname + "/views/layout",
     partialsDir: __dirname + "/views/partials",
-  }),
+  })
 );
 
 app.get("/", (req, res) => {
-  res.status(200).render("main", {});
+  res.status(200).render("main", {productos: productos1.productos});
 });
 app.get("/listaProductos", (req, res) => {
-  const stringyProducts = productos1.productos.map((prod) => {
-    return {stringyProduct : JSON.stringify(prod)}
-  })
-  res.status(200).render("listaDeProductos", {
-    productos : stringyProducts,
-  });
+  res.status(200).json(productos1.productos);
 });
 
-app.post("/productos", (req, res) => {
+app.post("/", (req, res) => {
   const { body } = req;
   try {
     const id = productos1.save(body);
-    const mensaje = (`Producto agregado con exito, id: ${id}`)
+    const mensaje = `Producto agregado con exito, id: ${id}`;
     res.status(200).render("main", {
-      mensaje
+      mensaje,
     });
-  }catch(err){
+  } catch (err) {
     res.status(200).render("main", {
-      mensaje : err
+      mensaje: err,
     });
   }
-  
 });
 
 const PORT = 1000;
-const server = app.listen(PORT, () =>
-  console.log(`🚀 Server started on port http://localhost:${PORT}`),
+server.listen(PORT, () =>
+  console.log(`🚀 Server started on port http://localhost:${PORT}`)
 );
 server.on("error", (err) => console.log(err));

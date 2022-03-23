@@ -1,0 +1,21 @@
+h1 {
+  color: grey
+}
+
+img{
+  height: 30px;
+}
+#messageList{
+  list-style-type: none;
+  margin: 0;
+ 
+}
+.msgNickname{
+  color: green;
+  font-weight: 900;
+}
+.msgTimestamp{
+  color: brown;
+  font-weight: 400;
+  font-size: small;
+}
