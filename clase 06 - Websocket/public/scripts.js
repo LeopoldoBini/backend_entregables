@@ -1,11 +1,13 @@
 const socket = io()
 const titulo = document.getElementById('titulo')
 const [inputNick , inputMsg] = document.getElementsByClassName('inp')
+const inpProd = document.getElementsByClassName('inpProd')
 const btnSend = document.getElementById('btnSend')
+const tableBody = document.getElementById('tableBody')
 const msgList = document.getElementById('messageList')
 let idSocket = ''
 let todosLosMensajes = ''
-
+let todosLosProductos = ''
 
 /* btnSend.addEventListener('click', () => {
     const mensaje = inputMsg.value
@@ -35,12 +37,16 @@ const addMsg = ()=>{
     )
     inputMsg.value = ""
 }
+const addingProd = () => {
+    socket.emit('productAdded')
+    console.log('producto mandado')
+    //inpProd.forEach(input => {input.value = ""})
+}
 
 socket.on('connect' , () => {
     console.log(socket, titulo)
     idSocket = socket.id
     titulo.innerText = idSocket
-
 
 })
 
@@ -51,7 +57,6 @@ socket.on('MensajeConexion', data =>{
 
 
 socket.on('todosLosMensajes', data=> {
-    console.log('Estos son todos los Mensajes =>' , data)
     todosLosMensajes =""
     data.forEach(mensaje => {
         todosLosMensajes+= `
@@ -64,4 +69,23 @@ socket.on('todosLosMensajes', data=> {
     });
     msgList.innerHTML = todosLosMensajes
 
+})
+socket.on('todosLosProductos', ()=>{
+    todosLosProductos =""
+    data.forEach(producto => {
+        todosLosProductos+= `
+        <tr>
+            <td>${producto.title}</td>
+            <td>${producto.price}</td>
+            <td><img src="${producto.thumbnail}" alt="${producto.title}"></td>
+      </tr>
+        `
+    });
+    tableBody.innerHTML = todosLosProductos
+})
+
+const btnPrueba = document.getElementById('pruebaFetch')
+
+btnPrueba.addEventListener('click', ()=> {
+    fetch("http://localhost:1000/fetchProductos").then(res => res.json()).then(res => console.log(res))
 })

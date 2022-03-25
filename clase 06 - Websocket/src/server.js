@@ -4,7 +4,8 @@ const fs = require("fs");
 const { engine } = require("express-handlebars");
 const app = express();
 const server = http.createServer(app)
-const { Server } = require('socket.io')
+const { Server } = require('socket.io');
+const { isObject } = require("util");
 const io = new Server(server)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -154,6 +155,9 @@ io.on('connection' , (socket) =>{
   socket.on('MensajeDesdeClienteAlConectarse' , (d) => {
     console.log(d)
   })
+  socket.on('productAdded' ,() => {
+    io.sockets.emit('todosLosProductos' , productos1.productos)
+  })
   socket.on('inputChatCliente', (fullMessage) => {
     todosLosMensajes.push(fullMessage)
     io.sockets.emit('todosLosMensajes' , todosLosMensajes)
@@ -182,11 +186,15 @@ app.engine(
 );
 
 app.get("/", (req, res) => {
-  res.status(200).render("main", {productos: productos1.productos});
+  res.status(200).render("main", {productos: productos1.productos})
+  console.log({productos: productos1.productos});
 });
 app.get("/listaProductos", (req, res) => {
   res.status(200).json(productos1.productos);
 });
+app.get('/fetchProductos', (req ,res) =>{
+  res.send({productos: productos1.productos} )
+})
 
 app.post("/", (req, res) => {
   const { body } = req;
@@ -195,10 +203,12 @@ app.post("/", (req, res) => {
     const mensaje = `Producto agregado con exito, id: ${id}`;
     res.status(200).render("main", {
       mensaje,
+      productos: productos1.productos
     });
   } catch (err) {
     res.status(200).render("main", {
       mensaje: err,
+      productos: productos1.productos
     });
   }
 });

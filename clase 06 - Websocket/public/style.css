@@ -5,6 +5,12 @@ h1 {
 img{
   height: 30px;
 }
+.main{
+  width: 80vw;
+}
+.container{
+  width: 80%;
+}
 #messageList{
   list-style-type: none;
   margin: 0;
