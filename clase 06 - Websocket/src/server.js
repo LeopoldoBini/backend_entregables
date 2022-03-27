@@ -23,7 +23,7 @@ const ContenedorProductos = class {
     try {
       const data = fs.readFileSync(this.path, "utf-8");
       const parsedData = JSON.parse(data);
-      console.log(data);
+
       this.idList = parsedData.reduce((a, b) => [...a, b.id], []);
       this.lastId = Math.max(...this.idList);
       this.productos = parsedData;
@@ -68,7 +68,7 @@ const ContenedorProductos = class {
       title ? (this.productos[indexToReWrite].title = title) : "";
       price ? (this.productos[indexToReWrite].price = price) : "";
       thumbnail ? (this.productos[indexToReWrite].thumbnail = thumbnail) : "";
-      console.log(this.productos[indexToReWrite]);
+      ;
       this.writeProductosOnFile();
       return {
         mensaje: "producto actualizado",
@@ -109,7 +109,7 @@ const ContenedorMensajes = class {
     try {
       const data = fs.readFileSync(this.path, "utf-8");
       const parsedData = JSON.parse(data);
-      console.log(data);
+      ;
       this.idList = parsedData.reduce((a, b) => [...a, b.id], []);
       this.lastId = Math.max(...this.idList);
       this.mensajes = parsedData;
@@ -143,29 +143,33 @@ generalMsgs.getAll();
 const usuariosConectados = []
 const todosLosMensajes = []
 
-io.on('connection' , (socket) =>{
-  usuariosConectados.push(socket.id) 
+io.on('connection', (socket) => {
+  usuariosConectados.push(socket.id)
   console.log(`💻 nuevo usuario conectado, Total: ${usuariosConectados.length}`, usuariosConectados)
-  
-  socket.emit('MensajeConexion' , 'Bienvenido ♥')
-  socket.emit('todosLosMensajes' , todosLosMensajes)
+
+  socket.emit('MensajeConexion', 'Bienvenido ♥')
+  socket.emit('todosLosMensajes', todosLosMensajes)
 
 
 
-  socket.on('MensajeDesdeClienteAlConectarse' , (d) => {
+  socket.on('MensajeDesdeClienteAlConectarse', (d) => {
     console.log(d)
   })
-  socket.on('productAdded' ,() => {
-    io.sockets.emit('todosLosProductos' , productos1.productos)
+  socket.on('productAdded', (id) => {
+    console.log(id)
+    io.sockets.emit('todosLosProductos', {
+      productos : productos1.productos,
+      sktId : id
+    })
   })
   socket.on('inputChatCliente', (fullMessage) => {
     todosLosMensajes.push(fullMessage)
-    io.sockets.emit('todosLosMensajes' , todosLosMensajes)
-    console.log('Estos son todos los Mensajes =>', todosLosMensajes)
+    io.sockets.emit('todosLosMensajes', todosLosMensajes)
+
   })
 
 
-  socket.on('disconnect' , () =>{
+  socket.on('disconnect', () => {
     console.log('❌ Usuario desconectado')
     usuariosConectados.splice(socket.id)
   })
@@ -186,30 +190,29 @@ app.engine(
 );
 
 app.get("/", (req, res) => {
-  res.status(200).render("main", {productos: productos1.productos})
-  console.log({productos: productos1.productos});
+  res.status(200).render("main", { productos: productos1.productos })
+
 });
 app.get("/listaProductos", (req, res) => {
   res.status(200).json(productos1.productos);
 });
-app.get('/fetchProductos', (req ,res) =>{
-  res.send({productos: productos1.productos} )
+app.get('/fetchProductos', (req, res) => {
+  res.send({ productos: productos1.productos, lastId: productos1.lastIds })
 })
 
 app.post("/", (req, res) => {
   const { body } = req;
   try {
     const id = productos1.save(body);
-    const mensaje = `Producto agregado con exito, id: ${id}`;
-    res.status(200).render("main", {
+    const mensaje = `producto cargado con exito, id: ${id}`
+    res.status(200).json({
+      id,
       mensaje,
       productos: productos1.productos
-    });
+    })
+
   } catch (err) {
-    res.status(200).render("main", {
-      mensaje: err,
-      productos: productos1.productos
-    });
+    res.status(400).json( {mensaje : err});
   }
 });
 
