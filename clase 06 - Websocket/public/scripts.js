@@ -5,6 +5,7 @@ const inpProd = document.getElementsByClassName("inpProd");
 const btnSend = document.getElementById("btnSend");
 const btnAddProd = document.getElementById("btnAddProd")
 const alertAddProd = document.getElementById("alertAddProd")
+const alertaChat = document.getElementById("alertaChat")
 const tableBody = document.getElementById("tableBody");
 const msgList = document.getElementById("messageList");
 let idSocket = "";
@@ -26,16 +27,25 @@ const renderProducts = (productList) => {
     tableBody.innerHTML = todosLosProductos;
   }
 const addMsg = () => {
-  const mensaje = inputMsg.value;
   const nickname = inputNick.value;
-  const timeStamp = new Date().toLocaleString();
-  socket.emit("inputChatCliente", {
-    mensaje,
-    idSocket,
-    nickname,
-    timeStamp,
-  });
-  inputMsg.value = "";
+  if(!nickname){
+    alertaChat.innerText = "Por favor, indicá tu Nickname"
+    setTimeout(()=>{
+      alertaChat.innerText = ""
+    },3000)
+    return
+  }
+  const mensaje = inputMsg.value;
+  if(mensaje){
+    const timeStamp = new Date().toLocaleString();
+    socket.emit("inputChatCliente", {
+      mensaje,
+      idSocket,
+      nickname,
+      timeStamp,
+    });
+    inputMsg.value = "";  
+  }
 };
 
 const addingProd = (e) => {
@@ -105,4 +115,4 @@ socket.on("todosLosProductos", ({productos , idProductoAgregado}) => {
 
 
 
-//  fetch("http://localhost:1000/fetchProductos").then(res => res.json()).then(res => console.log(res))
+

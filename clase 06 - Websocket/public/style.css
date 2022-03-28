@@ -10,6 +10,7 @@ img{
 }
 .container{
   width: 80%;
+  margin-top: 2rem;
 }
 #messageList{
   list-style-type: none;

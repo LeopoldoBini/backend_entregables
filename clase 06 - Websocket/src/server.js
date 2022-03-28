@@ -147,7 +147,7 @@ io.on('connection', (socket) => {
   usuariosConectados.push(socket.id)
   console.log(`💻 nuevo usuario conectado, Total: ${usuariosConectados.length}`, usuariosConectados)
 
-  socket.emit('todosLosMensajes', todosLosMensajes)
+  socket.emit('todosLosMensajes', generalMsgs.mensajes)
 
 
   socket.on('MensajeDesdeClienteAlConectarse', (d) => {
@@ -161,8 +161,9 @@ io.on('connection', (socket) => {
     })
   })
   socket.on('inputChatCliente', (fullMessage) => {
-    todosLosMensajes.push(fullMessage)
-    io.sockets.emit('todosLosMensajes', todosLosMensajes)
+    
+    generalMsgs.save(fullMessage)
+    io.sockets.emit('todosLosMensajes', generalMsgs.mensajes)
 
   })
 
