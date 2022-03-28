@@ -6,6 +6,7 @@ const app = express();
 const server = http.createServer(app)
 const { Server } = require('socket.io');
 const { isObject } = require("util");
+const { Console } = require("console");
 const io = new Server(server)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -139,7 +140,6 @@ const generalMsgs = new ContenedorMensajes("gralMsg");
 productos1.getAll();
 generalMsgs.getAll();
 
-
 const usuariosConectados = []
 const todosLosMensajes = []
 
@@ -147,19 +147,17 @@ io.on('connection', (socket) => {
   usuariosConectados.push(socket.id)
   console.log(`💻 nuevo usuario conectado, Total: ${usuariosConectados.length}`, usuariosConectados)
 
-  socket.emit('MensajeConexion', 'Bienvenido ♥')
   socket.emit('todosLosMensajes', todosLosMensajes)
-
 
 
   socket.on('MensajeDesdeClienteAlConectarse', (d) => {
     console.log(d)
   })
   socket.on('productAdded', (id) => {
-    console.log(id)
+    console.log(id , ' Acaba de Mandar un producto')
     io.sockets.emit('todosLosProductos', {
-      productos : productos1.productos,
-      sktId : id
+      productos: productos1.productos,
+      idProductoAgregado: productos1.lastId
     })
   })
   socket.on('inputChatCliente', (fullMessage) => {
@@ -167,7 +165,6 @@ io.on('connection', (socket) => {
     io.sockets.emit('todosLosMensajes', todosLosMensajes)
 
   })
-
 
   socket.on('disconnect', () => {
     console.log('❌ Usuario desconectado')
@@ -203,16 +200,12 @@ app.get('/fetchProductos', (req, res) => {
 app.post("/", (req, res) => {
   const { body } = req;
   try {
-    const id = productos1.save(body);
-    const mensaje = `producto cargado con exito, id: ${id}`
-    res.status(200).json({
-      id,
-      mensaje,
-      productos: productos1.productos
-    })
-
+    console.log(body)
+    console.log()
+    res.status(200).json(productos1.save(body));
   } catch (err) {
-    res.status(400).json( {mensaje : err});
+    console.log(err);
+    res.status(400)
   }
 });
 

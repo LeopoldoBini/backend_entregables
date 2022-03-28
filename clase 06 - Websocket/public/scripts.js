@@ -4,25 +4,26 @@ const [inputNick, inputMsg] = document.getElementsByClassName("inp");
 const inpProd = document.getElementsByClassName("inpProd");
 const btnSend = document.getElementById("btnSend");
 const btnAddProd = document.getElementById("btnAddProd")
+const alertAddProd = document.getElementById("alertAddProd")
 const tableBody = document.getElementById("tableBody");
 const msgList = document.getElementById("messageList");
 let idSocket = "";
 let todosLosMensajes = "";
 let todosLosProductos = "";
 
-const renderProducts = (productList , msg) => {
+const renderProducts = (productList) => {
     todosLosProductos = "";
+    console.log(productList, 'este viene de la formula renderProd')
     productList.forEach((producto) => {
       todosLosProductos += `
           <tr>
-              <td>${producto.title.value}</td>
-              <td>${producto.price.value}</td>
-              <td><img src="${producto.thumbnail.value}" alt="${producto.title.value}"></td>
+              <td>${producto.title}</td>
+              <td>${producto.price}</td>
+              <td><img src="${producto.thumbnail}" alt="${producto.title}"></td>
         </tr>
           `;
     });
     tableBody.innerHTML = todosLosProductos;
-    if (msg) document.getElementById('mensajeAddProd').innerText = msg
   }
 const addMsg = () => {
   const mensaje = inputMsg.value;
@@ -38,50 +39,48 @@ const addMsg = () => {
 };
 
 const addingProd = (e) => {
-    e.preventDefault()
-  const urlencoded = new URLSearchParams();
-  urlencoded.append("title", inpProd.title);
-  urlencoded.append("price", inpProd.price);
-  urlencoded.append("thumbnail", inpProd.thumbnail);
+    
+    const areThereAllvalues = Array.from(inpProd).reduce((prev,curr) =>{
+        return prev && !!curr.value
+    }, true)
+    if (areThereAllvalues){
+      const urlencoded = new URLSearchParams();
+      urlencoded.append("title", inpProd.title.value);
+      urlencoded.append("price", inpProd.price.value);
+      urlencoded.append("thumbnail", inpProd.thumbnail.value);
 
-  const requestOptions = {
-    method: "POST",
-    headers: new Headers(),
-    body: urlencoded,
-    redirect: "follow",
-  };
+      const requestOptions = {
+        method: 'POST',
+        headers: new Headers(),
+        body: urlencoded,
+        redirect: 'follow' 
+      };
 
-  fetch("http://localhost:1000/", requestOptions)
-    .then((response) => response.json())
-    .then((json) => {
-        id in json 
-        ? renderProducts(json.productos , json.mensaje) 
-        : (function () {
-            document.getElementById('mensajeAddProd').innerText = json.mensaje
-        })()
-    })
-    .catch((error) => console.log("error", error));
+      fetch("http://localhost:1000/", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        socket.emit("productAdded" , {idSocket});
+        console.log(result)
+      })
+      .then( () => {
+        Array.from(inpProd).forEach((input) => {
+          input.value = "";
+          })
+      })
+      .catch(error => console.log('error', error));  
+       console.log("producto mandado");
+    }else{
+        alertAddProd.innerText = 'Se necesitan todos los campos'
+    }
 
-    socket.emit("productAdded" , {idSocket});
-    console.log("producto mandado");
-    inpProd.forEach((input) => {
-    input.value = "";
-  });
 };
-btnAddProd.addEventListener('click' , addingProd)
+//btnAddProd.addEventListener('click' , addingProd)
 
 
 
 socket.on("connect", () => {
   idSocket = socket.id;
   titulo.innerText = idSocket;
-});
-
-socket.on("MensajeConexion", (data) => {
-  socket.emit(
-    "MensajeDesdeClienteAlConectarse",
-    "Eee graciela por dejarme pasar pues!"
-  );
 });
 
 socket.on("todosLosMensajes", (data) => {
@@ -98,11 +97,10 @@ socket.on("todosLosMensajes", (data) => {
   msgList.innerHTML = todosLosMensajes;
 });
 
-socket.on("todosLosProductos", ({productos, sktId}) => {
-    if (sktId != idSocket){
+socket.on("todosLosProductos", ({productos , idProductoAgregado}) => {
         todosLosProductos = "";
         renderProducts(productos);
-    }
+        alertAddProd.innerText = `Producto agragado con exito, id: ${idProductoAgregado}`
   });
 
 
