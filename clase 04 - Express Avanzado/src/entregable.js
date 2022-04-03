@@ -7,6 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 const apiProd = express.Router();
+app.use("/api/productos", apiProd);
 
 const Contenedor = class {
   constructor(nombreArchivo) {
@@ -143,7 +144,7 @@ apiProd.put("/", (req, res) => {
   })
 
 
-app.use("/api/productos", apiProd);
+
 
 const PORT = 8080;
 const server = app.listen(PORT, () => {

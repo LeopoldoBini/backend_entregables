@@ -13,30 +13,30 @@ let todosLosMensajes = "";
 let todosLosProductos = "";
 
 const renderProducts = (productList) => {
-    todosLosProductos = "";
-    console.log(productList, 'este viene de la formula renderProd')
-    productList.forEach((producto) => {
-      todosLosProductos += `
+  todosLosProductos = "";
+  console.log(productList, 'este viene de la formula renderProd')
+  productList.forEach((producto) => {
+    todosLosProductos += `
           <tr>
               <td>${producto.title}</td>
               <td>${producto.price}</td>
               <td><img src="${producto.thumbnail}" alt="${producto.title}"></td>
         </tr>
           `;
-    });
-    tableBody.innerHTML = todosLosProductos;
-  }
+  });
+  tableBody.innerHTML = todosLosProductos;
+}
 const addMsg = () => {
   const nickname = inputNick.value;
-  if(!nickname){
+  if (!nickname) {
     alertaChat.innerText = "Por favor, indicá tu Nickname"
-    setTimeout(()=>{
+    setTimeout(() => {
       alertaChat.innerText = ""
-    },3000)
+    }, 3000)
     return
   }
   const mensaje = inputMsg.value;
-  if(mensaje){
+  if (mensaje) {
     const timeStamp = new Date().toLocaleString();
     socket.emit("inputChatCliente", {
       mensaje,
@@ -44,44 +44,44 @@ const addMsg = () => {
       nickname,
       timeStamp,
     });
-    inputMsg.value = "";  
+    inputMsg.value = "";
   }
 };
 
 const addingProd = (e) => {
-    
-    const areThereAllvalues = Array.from(inpProd).reduce((prev,curr) =>{
-        return prev && !!curr.value
-    }, true)
-    if (areThereAllvalues){
-      const urlencoded = new URLSearchParams();
-      urlencoded.append("title", inpProd.title.value);
-      urlencoded.append("price", inpProd.price.value);
-      urlencoded.append("thumbnail", inpProd.thumbnail.value);
 
-      const requestOptions = {
-        method: 'POST',
-        headers: new Headers(),
-        body: urlencoded,
-        redirect: 'follow' 
-      };
+  const areThereAllvalues = Array.from(inpProd).reduce((prev, curr) => {
+    return prev && !!curr.value
+  }, true)
+  if (areThereAllvalues) {
+    const urlencoded = new URLSearchParams();
+    urlencoded.append("title", inpProd.title.value);
+    urlencoded.append("price", inpProd.price.value);
+    urlencoded.append("thumbnail", inpProd.thumbnail.value);
 
-      fetch("http://localhost:1000/", requestOptions)
+    const requestOptions = {
+      method: 'POST',
+      headers: new Headers(),
+      body: urlencoded,
+      redirect: 'follow'
+    };
+
+    fetch("http://localhost:1000/", requestOptions)
       .then(response => response.json())
       .then(result => {
-        socket.emit("productAdded" , {idSocket});
+        socket.emit("productAdded", { idSocket });
         console.log(result)
       })
-      .then( () => {
+      .then(() => {
         Array.from(inpProd).forEach((input) => {
           input.value = "";
-          })
+        })
       })
-      .catch(error => console.log('error', error));  
-       console.log("producto mandado");
-    }else{
-        alertAddProd.innerText = 'Se necesitan todos los campos'
-    }
+      .catch(error => console.log('error', error));
+    console.log("producto mandado");
+  } else {
+    alertAddProd.innerText = 'Se necesitan todos los campos'
+  }
 
 };
 //btnAddProd.addEventListener('click' , addingProd)
@@ -107,11 +107,11 @@ socket.on("todosLosMensajes", (data) => {
   msgList.innerHTML = todosLosMensajes;
 });
 
-socket.on("todosLosProductos", ({productos , idProductoAgregado}) => {
-        todosLosProductos = "";
-        renderProducts(productos);
-        alertAddProd.innerText = `Producto agragado con exito, id: ${idProductoAgregado}`
-  });
+socket.on("todosLosProductos", ({ productos, idProductoAgregado }) => {
+  todosLosProductos = "";
+  renderProducts(productos);
+  alertAddProd.innerText = `Producto agragado con exito, id: ${idProductoAgregado}`
+});
 
 
 

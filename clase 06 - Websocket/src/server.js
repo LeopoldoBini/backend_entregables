@@ -5,8 +5,7 @@ const { engine } = require("express-handlebars");
 const app = express();
 const server = http.createServer(app)
 const { Server } = require('socket.io');
-const { isObject } = require("util");
-const { Console } = require("console");
+
 const io = new Server(server)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -215,3 +214,4 @@ server.listen(PORT, () =>
   console.log(`🚀 Server started on port http://localhost:${PORT}`)
 );
 server.on("error", (err) => console.log(err));
+
