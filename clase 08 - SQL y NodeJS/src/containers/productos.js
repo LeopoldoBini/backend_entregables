@@ -1,92 +1,79 @@
-import { readFileSync, writeFileSync } from "fs";
-import {knexsql} from './db.js';
+import { knexsql } from "../../db/db.js";
 
 const ContenedorProductos = class {
-    constructor(nombreArchivo) {
-      this.nombre = nombreArchivo;
-      this.path = `./${nombreArchivo}.txt`;
-      this.lastId = 0;
-      this.idList = [];
-      this.productos = [];
-    }
-    getAll() {
-      try {
-        const data = readFileSync(this.path, "utf-8");
-        const parsedData = JSON.parse(data);
-  
-        this.idList = parsedData.reduce((a, b) => [...a, b.id], []);
-        this.lastId = Math.max(...this.idList);
-        this.productos = parsedData;
-        return parsedData;
-      } catch (er) {
-        writeFileSync(this.path, "[]");
-        console.log(er);
-        return [];
-      }
-    }
-    writeProductosOnFile() {
-      const strigyList = JSON.stringify(this.productos);
-      writeFileSync(this.path, strigyList);
-    }
-    save(producto) {
-      if (producto.title && producto.price && producto.thumbnail) {
-        this.getAll();
-        this.lastId++;
-        producto.id = this.lastId;
-        this.productos.push(producto);
-        this.writeProductosOnFile();
-        return producto.id;
-      } else {
-        throw new Error("Se requieren todos los campos");
-      }
-    }
-    getByid(id) {
-      this.getAll();
-      const foundProduct = this.productos.filter((producto) => producto.id == id);
-      return foundProduct.length === 0
-        ? "no tenemos ningun producto con ese id"
-        : foundProduct;
-    }
-    reWrite(id, producto) {
-      this.getAll();
-      if (this.idList.includes(id)) {
-        const { title, price, thumbnail } = producto;
-        const indexToReWrite = this.productos.findIndex(
-          (producto) => producto.id == id
-        );
-  
-        title ? (this.productos[indexToReWrite].title = title) : "";
-        price ? (this.productos[indexToReWrite].price = price) : "";
-        thumbnail ? (this.productos[indexToReWrite].thumbnail = thumbnail) : "";
-        ;
-        this.writeProductosOnFile();
-        return {
-          mensaje: "producto actualizado",
-          producto: this.productos[indexToReWrite],
-        };
-      } else {
-        ("no tenemos ese producto");
-      }
-    }
-    deleteById(id) {
-      this.getAll();
-      if (this.idList.includes(id)) {
-        const filteredList = this.productos.filter((prod) => prod.id != id);
-        writeFileSync(this.path, JSON.stringify(filteredList));
-        this.getAll();
-        return "Producto eliminado";
-      } else {
-        return "no tenemos ese producto";
-      }
-    }
-    deleteAll() {
-      writeFileSync(this.path, "[]");
-      this.lastId = 0;
-      this.idList = [];
-      this.productos = [];
-    }
-  };
+  constructor(nombreArchivo) {
+    this.nombre = nombreArchivo;
+    this.path = `./${nombreArchivo}.txt`;
+    this.lastId = 0;
+    this.idList = [];
+    this.productos = [];
+  }
+  async getAll() {
 
-  const productos1 = new ContenedorProductos("lista1");
+    try {
+      const allproducts = await knexsql.select("*").from("productos");
+      return allproducts;	
+      
+    } catch (error) {
+      console.log(error);
+      return { message: "error al obtener los productos", error: error.message };
+    } finally {
+      knexsql.destroy();
+    }
 
-  export default productos1;
+  }
+
+  async save(producto) {
+    try { 
+      const newProductId = await knexsql.insert(producto).into("productos");
+      return newProductId[0];
+    } catch (error) {
+      console.log(error);
+      return { message: "error al guardar el producto", error: error.message };
+    } finally {
+      knexsql.destroy();
+    }
+  }
+  async getByid(id) {
+    try {
+      const foundProduct = await knexsql.select("*").from("productos").where("id" ,id);
+      return foundProduct[0];	
+    } catch (error) {
+      console.log(error);
+      return { message: "error al obtener el producto", error: error.message };
+    } finally {
+      knexsql.destroy();
+    }
+
+  }
+  async reWrite(id, producto) {
+    try {
+      await knexsql.update(producto).into("productos").where("id", id);
+      const updatedProduct = await this.getByid(id);
+      return { message: "producto actualizado", producto: updatedProduct };
+    } catch (error) {
+      console.log(error);
+      return { message: "error al actualizar el producto", error: error.message };
+    } finally {
+      knexsql.destroy();
+    }
+  }
+  async deleteById(id) {
+    try {
+      const deletedProd = await this.getByid(id);
+      await knexsql.delete().from("productos").where("id", id);
+      return { message: "producto eliminado", producto: deletedProd };
+    } catch (error) {
+      console.log(error);
+      return { message: "error al eliminar el producto", error: error.message };
+    } finally {
+      knexsql.destroy();
+    }
+  }
+
+};
+
+const productos1 = new ContenedorProductos("lista1");
+
+
+export default productos1;

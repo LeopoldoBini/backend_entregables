@@ -18,35 +18,34 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 
-productos1.getAll();
-generalMsgs.getAll();
 
 
 
-const usuariosConectados = []
-const todosLosMensajes = []
+const usuariosConectados = [];
 
-io.on('connection', (socket) => {
+
+io.on('connection', async (socket) => {
   usuariosConectados.push(socket.id)
   console.log(`💻 nuevo usuario conectado, Total: ${usuariosConectados.length}`, usuariosConectados)
 
-  socket.emit('todosLosMensajes', generalMsgs.mensajes)
+  const todosLosMensajes = await generalMsgs.getAll()
+  console.log(todosLosMensajes)
+  socket.emit('todosLosMensajes', todosLosMensajes)
 
 
-  socket.on('MensajeDesdeClienteAlConectarse', (d) => {
-    console.log(d)
-  })
-  socket.on('productAdded', (id) => {
+  
+  socket.on('productAdded', async (id) => {
+    const todosLosProductos = await productos1.getAll()
     console.log(id , ' Acaba de Mandar un producto')
     io.sockets.emit('todosLosProductos', {
-      productos: productos1.productos,
+      productos: todosLosProductos,
       idProductoAgregado: productos1.lastId
     })
   })
-  socket.on('inputChatCliente', (fullMessage) => {
-    
-    generalMsgs.save(fullMessage)
-    io.sockets.emit('todosLosMensajes', generalMsgs.mensajes)
+  socket.on('inputChatCliente', async (fullMessage) => {
+    await generalMsgs.save(fullMessage)
+    const todosLosMensajes = await generalMsgs.getAll()
+    io.sockets.emit('todosLosMensajes', todosLosMensajes)
 
   })
 
@@ -70,23 +69,27 @@ app.engine(
   })
 );
 
-app.get("/", (req, res) => {
-  res.status(200).render("main", { productos: productos1.productos })
+app.get("/", async (req, res) => {
+  const productos = await productos1.getAll();
+  res.status(200).render("main", { productos });
 
 });
-app.get("/listaProductos", (req, res) => {
-  res.status(200).json(productos1.productos);
+app.get("/listaProductos", async (req, res) => {
+  const productos = await productos1.getAll(); 
+  res.status(200).json(productos);
 });
-app.get('/fetchProductos', (req, res) => {
-  res.send({ productos: productos1.productos, lastId: productos1.lastIds })
+app.get('/fetchProductos', async (req, res) => {
+  const productos = await productos1.getAll();
+  const lastId = Math.max(productos.map(producto => producto.id))
+  res.send({ productos: productos, lastId: lastId })
 })
 
-app.post("/", (req, res) => {
+app.post("/", async (req, res) => {
   const { body } = req;
   try {
     console.log(body)
-    console.log()
-    res.status(200).json(productos1.save(body));
+    const savedProd = await productos1.save(body);
+    res.status(200).json(savedProd);
   } catch (err) {
     console.log(err);
     res.status(400)

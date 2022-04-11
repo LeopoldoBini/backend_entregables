@@ -40,7 +40,6 @@ const addMsg = () => {
     const timeStamp = new Date().toLocaleString();
     socket.emit("inputChatCliente", {
       mensaje,
-      idSocket,
       nickname,
       timeStamp,
     });
@@ -99,8 +98,8 @@ socket.on("todosLosMensajes", (data) => {
     todosLosMensajes += `
         <li class="msg">
            <em class="msgNickname">${mensaje.nickname}</em>
-           <span class="msgTimestamp">[${mensaje.timeStamp}]: </span>
-           ${mensaje.mensaje} 
+           <span class="msgTimestamp">[${mensaje.timestamp}]: </span>
+           ${mensaje.message} 
         </li>
         `;
   });
