@@ -133,12 +133,11 @@ db.productos.insertOne({
     thumbnail: 'https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg',
     price: 223
   })
-db.productos.find({precio: {$lt:1000}})
-db.productos.find({precio: {$gt: 1000, $lt: 3000}})
-db.productos.find({precio: {$gt:3000}})
-db.productos.find().sort({precio: 1}).limit(1).skip(2)
+db.productos.find({price: {$lt:1000}})
+db.productos.find({price: {$gt: 1000, $lt: 3000}})
+db.productos.find({price: {$gt:3000}})
+db.productos.find().sort({price: 1}).limit(1).skip(2)
 db.productos.updateMany({},{$set: {stock: 100}})
-db.productos.updateMany({precio: {$gt: 4000}},{$set: { stock: 0 }})
-db.productos.deleteMany({precio: {$lt: 1000}})
+db.productos.updateMany({price: {$gt: 4000}},{$set: { stock: 0 }})
+db.productos.deleteMany({price: {$lt: 1000}})
 db.createUser({user:'pepe', pwd:'asd456', roles: [{role: 'read', db: 'ecommerce'}]})
-db.auth("pepe", passwordPrompt())
