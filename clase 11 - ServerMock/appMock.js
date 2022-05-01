@@ -7,6 +7,8 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import { Server } from 'socket.io';
 import ViewsRoutes from "./src/routes/views.route.js";
+import { normalizeMensajes, denormalizeMensajes } from "./src/normalization/normMessages.js";
+
 
 const app = express();
 const server = createServer(app)
@@ -38,7 +40,7 @@ io.on('connection', async (socket) => {
   usuariosConectados.push(socket.id)
   console.log(`💻 nuevo usuario conectado, Total: ${usuariosConectados.length}`, usuariosConectados)
 
-  const todosLosMensajes = await generalMsgs.getAll()
+  const todosLosMensajes = normalizeMensajes( await generalMsgs.getAll())
 
   socket.emit('todosLosMensajes', todosLosMensajes)
 

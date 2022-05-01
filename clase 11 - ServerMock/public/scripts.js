@@ -109,8 +109,15 @@ btnSend.addEventListener("click", async (e) => {
 
 }; */
 //btnAddProd.addEventListener('click' , addingProd)
-
-
+const { normalize, schema, denormalize } = normalizr;
+const denormalizeMensajes = (mensajesNormalizados) => {
+  const authorSchema = new schema.Entity("authors");
+  const messageSchema = new schema.Entity("messages", {
+      author : authorSchema   });
+  const messageListSchema = new schema.Array(messageSchema);
+  const mensajesDenormalizados = denormalize(mensajesNormalizados.result, messageListSchema, mensajesNormalizados.entities);
+  return mensajesDenormalizados;
+}
 
 socket.on("connect", () => {
   idSocket = socket.id;
@@ -118,8 +125,16 @@ socket.on("connect", () => {
 });
 
 socket.on("todosLosMensajes", (data) => {
+  console.log(data, "este viene de la formula renderProd")
+  const mensajesDenormalizados = denormalizeMensajes(data);
+  
+  const normSize = JSON.stringify(data).length;
+  const denormSize = JSON.stringify(mensajesDenormalizados).length;
+  const sizeDiffPercent = (normSize - denormSize) / normSize * 100;
+  document.getElementById("percentage").innerText = `Porcentaje de reducción: ${sizeDiffPercent.toFixed(2)}%`;
+
   todosLosMensajes = "";
-  data.forEach((mensaje) => {
+  mensajesDenormalizados.forEach((mensaje) => {
     todosLosMensajes += `
         <li class="msg">
         <img class="avatar" src="${mensaje.author.avatar}" alt="avatar">

@@ -1,24 +1,28 @@
 import { normalize, schema, denormalize } from "normalizr";
-import util from "util";
-import fs from "fs";
-
-const mensajes = JSON.parse(fs.readFileSync("../../mensajes.json"));
 
 
-const authorSchema = new schema.Entity("authors");
+export const normalizeMensajes = (mensajes) => {
 
-const messageSchema = new schema.Entity("messages", {
-    author : authorSchema
-});
+    const authorSchema = new schema.Entity("authors");
+    const messageSchema = new schema.Entity("messages", {
+        author : authorSchema   });
+    const messageListSchema = new schema.Array(messageSchema);
 
-const messageListSchema = new schema.Entity("messagesList", {
-    messages : [messageSchema]
-});
+    const mensajesNormalizados = normalize(mensajes, messageListSchema);
 
-function print(data) { 
-    console.log(util.inspect(data, false, 12, true));
-  }
+    return mensajesNormalizados;
+}
 
-const mensajesNormalizados = normalize(mensajes, messageListSchema);
 
-print(mensajesNormalizados)
+export const denormalizeMensajes = (mensajesNormalizados) => {
+    const authorSchema = new schema.Entity("authors");
+    const messageSchema = new schema.Entity("messages", {
+        author : authorSchema   });
+    const messageListSchema = new schema.Array(messageSchema);
+    const mensajesDenormalizados = denormalize(mensajesNormalizados.result, messageListSchema, mensajesNormalizados.entities);
+    return mensajesDenormalizados;
+}
+
+
+
+

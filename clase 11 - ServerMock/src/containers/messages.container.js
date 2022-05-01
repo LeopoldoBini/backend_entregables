@@ -1,5 +1,8 @@
     import fs from 'fs';
     import faker from '@faker-js/faker';
+
+
+    
     const ContenedorMensajes = class {
     constructor(nombreArchivo) {
       this.nombre = nombreArchivo;
