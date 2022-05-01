@@ -1,9 +1,7 @@
-import ProductService from "../services/generateProducts.service.js";
 import { generateProducts } from "../utils/generateProducts.util.js";
 
 export default class ViewsControllers {
     constructor() {
-        this.productService = new ProductService();
         this.generateProducts = generateProducts;
     }
 

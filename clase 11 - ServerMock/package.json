@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "c11": "nodemon --inspect ./src/server.js"
+    "c11": "nodemon --inspect ./appMock.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "express-handlebars": "^6.0.3",
     "knex": "^1.0.4",
     "mysql2": "^2.3.3",
+    "normalizr": "^3.6.2",
     "socket.io": "^4.4.1",
     "sqlite3": "^5.0.2"
   },
