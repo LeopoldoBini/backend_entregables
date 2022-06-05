@@ -1,0 +1,3 @@
+pm2 start server.js --name="Cserver2" --watch -p "3003"
+
+pm2 start server.js --name="Cserver2" --watch -i 4 -p "3004"

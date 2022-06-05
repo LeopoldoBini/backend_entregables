@@ -1,0 +1,72 @@
+h1 {
+  color: grey
+}
+
+img{
+  height: 30px;
+}
+.main{
+  width: 80vw;
+}
+.container{
+  width: 80%;
+  margin-top: 2rem;
+}
+#messageList{
+  list-style-type: none;
+  margin: 0;
+ 
+}
+.msgNickname{
+  color: green;
+  font-weight: 900;
+}
+.msgTimestamp{
+  color: brown;
+  font-weight: 400;
+  font-size: small;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+}
+.avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.inp{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+#percentage{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: large;
+  font-family: consolas;
+  
+}
+#lognav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background-color: rgb(123, 245, 172);
+  padding: 0.5rem; 
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-bottom: 1rem;
+}
+#logginbtn{
+  margin: auto 
+}
