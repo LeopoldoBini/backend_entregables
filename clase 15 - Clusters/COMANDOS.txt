@@ -1,3 +1,7 @@
-pm2 start server.js --name="Cserver2" --watch -p "3003"
-
-pm2 start server.js --name="Cserver2" --watch -i 4 -p "3004"
+Comandos para iniciar los servidores:
+pm2 start server.js --name="Server0" --watch -- -p 8080
+pm2 start server.js --name="Server1" --watch -- -p 8081 -m CLUSTER
+pm2 start server.js --name="Server2" --watch -- -p 8082
+pm2 start server.js --name="Server3" --watch -- -p 8083
+pm2 start server.js --name="Server4" --watch -- -p 8084
+pm2 start server.js --name="Server5" --watch -- -p 8085

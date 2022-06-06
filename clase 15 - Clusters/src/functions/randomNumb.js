@@ -10,7 +10,3 @@ export const randomNumb = ( cantidad = 100000000) => {
 }
 
 
-process.on("message", (cantidad) => {
-    const obj = randomNumb(cantidad);
-    process.send(obj);
-})

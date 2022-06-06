@@ -15,7 +15,8 @@ import { productRouter, cartRouter, messagesRouter, infoRouter, randomRouter } f
 
 if (cluster.isMaster) {
     console.log(`Master ${process.pid} is running`);
-    if (argvs.mode= "CLUSTER"){
+    if (argvs.mode == "CLUSTER"){
+        console.log(argvs.mode);
         for (let i = 0; i < numCPUs; i++) {
             cluster.fork();
         }   
@@ -40,10 +41,10 @@ if (cluster.isMaster) {
     app.use('/api', cartRouter)
     app.use('/api', messagesRouter)
     app.use('/info', infoRouter)
-    app.use('/random', randomRouter)
+    app.use('/api/random', randomRouter)
 
     app.get("/", (req, res) => {
-        res.send("Hello World")
+        res.send(`Puerto :${argvs.puertoFromArgv} , PID: ${process.pid}`)
     })
 
     app.set("views", "./src/views");
@@ -58,6 +59,7 @@ if (cluster.isMaster) {
         })
     );
     const PORT = argvs.puertoFromArgv
+
     server.listen(PORT, () => {
         console.log(`🤖 Server started on http://localhost:${PORT}`)
     })
