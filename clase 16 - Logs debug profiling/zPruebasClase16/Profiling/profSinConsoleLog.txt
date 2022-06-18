@@ -1,0 +1,933 @@
+Statistical profiling result from sinConsoleLog.log, (5004 ticks, 10 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   3783   75.6%          /usr/bin/node
+    104    2.1%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      6    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      1    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     55    1.1%    5.0%  LazyCompile: *wrap /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+     43    0.9%    3.9%  LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     30    0.6%    2.7%  LazyCompile: *parse /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     18    0.4%    1.6%  LazyCompile: *resolve path.js:1067:10
+     16    0.3%    1.4%  LazyCompile: *next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     15    0.3%    1.4%  LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+     14    0.3%    1.3%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:368:47
+     12    0.2%    1.1%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:174:29
+     11    0.2%    1.0%  LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+     11    0.2%    1.0%  LazyCompile: *join path.js:1142:7
+     10    0.2%    0.9%  LazyCompile: *generateList /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+     10    0.2%    0.9%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:167:47
+      9    0.2%    0.8%  LazyCompile: *makeAbs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/common.js:203:18
+      8    0.2%    0.7%  LazyCompile: *anonymous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:12:42
+      7    0.1%    0.6%  RegExp: (?:\r\n?|\n).*
+      7    0.1%    0.6%  LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      6    0.1%    0.5%  LazyCompile: *setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      6    0.1%    0.5%  LazyCompile: *readFile fs.js:319:18
+      6    0.1%    0.5%  LazyCompile: *normalizeString path.js:59:25
+      6    0.1%    0.5%  LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      6    0.1%    0.5%  LazyCompile: *SubExpression /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      5    0.1%    0.5%  LazyCompile: *appendEscaped /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      4    0.1%    0.4%  LazyCompile: *castChunk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+      4    0.1%    0.4%  LazyCompile: *accept /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/visitor.js:57:26
+      4    0.1%    0.4%  LazyCompile: *RES /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/inflight/inflight.js:18:28
+      3    0.1%    0.3%  RegExp: \r?\n\s*?$
+      3    0.1%    0.3%  RegExp: (^|\r?\n)\s*?$
+      3    0.1%    0.3%  LazyCompile: *relative path.js:1166:11
+      3    0.1%    0.3%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:67:35
+      3    0.1%    0.3%  LazyCompile: *nextTick internal/process/task_queues.js:103:18
+      3    0.1%    0.3%  LazyCompile: *next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:176:16
+      3    0.1%    0.3%  LazyCompile: *extname path.js:1357:10
+      3    0.1%    0.3%  LazyCompile: *anonymous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:549:49
+      3    0.1%    0.3%  LazyCompile: *Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+      3    0.1%    0.3%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      2    0.0%    0.2%  RegExp: ^\s*?\r?\n
+      2    0.0%    0.2%  RegExp: ^(?:\{\{\{\{)
+      2    0.0%    0.2%  RegExp: ^(?:\{\{(~)?\s*else\b)
+      2    0.0%    0.2%  RegExp: ^(?:\{\{(~)?![\s\S]*?\}\})
+      2    0.0%    0.2%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      2    0.0%    0.2%  LazyCompile: *wrapper /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/wrappy/wrappy.js:19:19
+      2    0.0%    0.2%  LazyCompile: *emit events.js:349:44
+      2    0.0%    0.2%  LazyCompile: *WhitespaceControl.Program /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      2    0.0%    0.2%  LazyCompile: *MustacheStatement /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      2    0.0%    0.2%  LazyCompile: *Glob._readdir /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:525:36
+      2    0.0%    0.2%  LazyCompile: *Glob._processReaddir2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:375:44
+      2    0.0%    0.2%  LazyCompile: *ExpressHandlebars._getTemplateName /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:393:61
+      2    0.0%    0.2%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:251:47
+      1    0.0%    0.1%  RegExp: ^text\/|^application\/(javascript|json)
+      1    0.0%    0.1%  RegExp: ^\s*([^;\s]*)(?:;|\s|$)
+      1    0.0%    0.1%  RegExp: ^\/api\/?(?=\/|$)
+      1    0.0%    0.1%  RegExp: ^\.|this\b
+      1    0.0%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.0%    0.1%  RegExp: ^.*[\.\/\\]
+      1    0.0%    0.1%  RegExp: ^(?:\}(~)?\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\{)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\s*else\s*(~)?\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\^)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\/)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?&)
+      1    0.0%    0.1%  RegExp: ^(?:'(\\[']|[^'])*')
+      1    0.0%    0.1%  RegExp: ^(?:$)
+      1    0.0%    0.1%  LazyCompile: *trim_prefix /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:288:23
+      1    0.0%    0.1%  LazyCompile: *transformLiteralToPath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:551:32
+      1    0.0%    0.1%  LazyCompile: *stringifyFnReplacer /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/safe-stable-stringify/index.js:203:32
+      1    0.0%    0.1%  LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:23:22
+      1    0.0%    0.1%  LazyCompile: *resolvePath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1    0.0%    0.1%  LazyCompile: *realpathSync fs.js:1723:22
+      1    0.0%    0.1%  LazyCompile: *readPackageScope internal/modules/cjs/loader.js:289:26
+      1    0.0%    0.1%  LazyCompile: *readFileAfterClose internal/fs/read_file_context.js:49:28
+      1    0.0%    0.1%  LazyCompile: *read internal/fs/read_file_context.js:88:7
+      1    0.0%    0.1%  LazyCompile: *pushStackLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:877:46
+      1    0.0%    0.1%  LazyCompile: *parse /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/vary/index.js:96:16
+      1    0.0%    0.1%  LazyCompile: *parse /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/minimatch/minimatch.js:413:9
+      1    0.0%    0.1%  LazyCompile: *opcode /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:347:26
+      1    0.0%    0.1%  LazyCompile: *objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      1    0.0%    0.1%  LazyCompile: *normalize path.js:1103:12
+      1    0.0%    0.1%  LazyCompile: *lookupProperty /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:118:44
+      1    0.0%    0.1%  LazyCompile: *lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1    0.0%    0.1%  LazyCompile: *isAbsolute path.js:1132:13
+      1    0.0%    0.1%  LazyCompile: *extend /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/utils.js:28:16
+      1    0.0%    0.1%  LazyCompile: *_addListener events.js:428:22
+      1    0.0%    0.1%  LazyCompile: *__generator /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:27:58
+      1    0.0%    0.1%  LazyCompile: *SourceNode_add /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:172:51
+      1    0.0%    0.1%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:597:37
+      1    0.0%    0.1%  LazyCompile: *<anonymous> :1:20
+      1    0.0%    0.1%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:360:47
+      1    0.0%    0.1%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:274:31
+      1    0.0%    0.1%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:85:24
+      1    0.0%    0.1%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:98:47
+      1    0.0%    0.1%  LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:20:46
+      1    0.0%    0.1%  Function: *wasm-function[30]
+
+ [C++]:
+   ticks  total  nonlib   name
+    215    4.3%   19.4%  __write
+    199    4.0%   17.9%  __pthread_cond_signal
+     70    1.4%    6.3%  epoll_pwait
+     47    0.9%    4.2%  __GI___pthread_mutex_unlock
+     28    0.6%    2.5%  __libc_read
+     16    0.3%    1.4%  __libc_malloc
+      9    0.2%    0.8%  __pthread_cond_timedwait
+      7    0.1%    0.6%  __mprotect
+      6    0.1%    0.5%  __lll_lock_wait
+      5    0.1%    0.5%  __libc_free
+      5    0.1%    0.5%  _IO_fwrite
+      4    0.1%    0.4%  do_futex_wait.constprop.0
+      4    0.1%    0.4%  __madvise
+      4    0.1%    0.4%  __libc_write
+      3    0.1%    0.3%  operator new(unsigned long)
+      3    0.1%    0.3%  __pthread_cond_broadcast
+      3    0.1%    0.3%  __dynamic_cast
+      3    0.1%    0.3%  __GI___pthread_mutex_lock
+      3    0.1%    0.3%  _IO_file_xsputn
+      2    0.0%    0.2%  std::ostream::sentry::sentry(std::ostream&)
+      2    0.0%    0.2%  std::ostream& std::ostream::_M_insert<long>(long)
+      2    0.0%    0.2%  std::locale::locale()
+      2    0.0%    0.2%  std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::underflow()
+      2    0.0%    0.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      2    0.0%    0.2%  std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
+      2    0.0%    0.2%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      2    0.0%    0.2%  posix_memalign
+      2    0.0%    0.2%  operator new[](unsigned long)
+      2    0.0%    0.2%  epoll_ctl
+      2    0.0%    0.2%  brk
+      2    0.0%    0.2%  accept4
+      2    0.0%    0.2%  __munmap
+      2    0.0%    0.2%  __errno_location
+      2    0.0%    0.2%  __cxxabiv1::__vmi_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+      2    0.0%    0.2%  __GI___pthread_getspecific
+      1    0.0%    0.1%  std::string::find(char const*, unsigned long, unsigned long) const
+      1    0.0%    0.1%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.0%    0.1%  std::locale::operator=(std::locale const&)
+      1    0.0%    0.1%  std::locale::id::_M_id() const
+      1    0.0%    0.1%  std::istream::sentry::sentry(std::istream&, bool)
+      1    0.0%    0.1%  std::ios_base::_M_dispose_callbacks()
+      1    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+      1    0.0%    0.1%  __vsnprintf
+      1    0.0%    0.1%  __read_nocancel
+      1    0.0%    0.1%  __pthread_cond_wait
+      1    0.0%    0.1%  _IO_fflush
+
+ [Summary]:
+   ticks  total  nonlib   name
+    423    8.5%   38.1%  JavaScript
+    677   13.5%   61.0%  C++
+    145    2.9%   13.1%  GC
+   3894   77.8%          Shared libraries
+     10    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    191   43.0%    3.8%  __pthread_cond_signal
+    157   35.4%    3.1%  __write
+     24    5.4%    0.5%  __GI___pthread_mutex_unlock
+     14    3.2%    0.3%  __libc_malloc
+      6    1.4%    0.1%  __mprotect
+      4    0.9%    0.1%  __madvise
+      4    0.9%    0.1%  _IO_fwrite
+      3    0.7%    0.1%  operator new(unsigned long)
+      3    0.7%    0.1%  __dynamic_cast
+      3    0.7%    0.1%  __GI___pthread_mutex_lock
+      3    0.7%    0.1%  _IO_file_xsputn
+      2    0.5%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      2    0.5%    0.0%  std::locale::locale()
+      2    0.5%    0.0%  std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::underflow()
+      2    0.5%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      2    0.5%    0.0%  std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char)
+      2    0.5%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      2    0.5%    0.0%  posix_memalign
+      2    0.5%    0.0%  operator new[](unsigned long)
+      2    0.5%    0.0%  brk
+      2    0.5%    0.0%  __cxxabiv1::__vmi_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+      1    0.2%    0.0%  std::string::find(char const*, unsigned long, unsigned long) const
+      1    0.2%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)
+      1    0.2%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.2%    0.0%  std::locale::operator=(std::locale const&)
+      1    0.2%    0.0%  std::locale::id::_M_id() const
+      1    0.2%    0.0%  std::istream::sentry::sentry(std::istream&, bool)
+      1    0.2%    0.0%  std::ios_base::_M_dispose_callbacks()
+      1    0.2%    0.0%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+      1    0.2%    0.0%  __vsnprintf
+      1    0.2%    0.0%  __lll_lock_wait
+      1    0.2%    0.0%  __libc_write
+      1    0.2%    0.0%  __libc_free
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   3783   75.6%  /usr/bin/node
+   2037   53.8%    /usr/bin/node
+    174    8.5%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:986:18
+    174  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+    174  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+    174  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+    164    8.1%      LazyCompile: ~readFileAfterOpen fs.js:278:27
+    161    7.9%      LazyCompile: ~close internal/fs/read_file_context.js:116:8
+    161  100.0%        LazyCompile: ~readFileAfterRead internal/fs/read_file_context.js:28:27
+     71    3.5%      LazyCompile: ~read internal/fs/read_file_context.js:88:7
+     71  100.0%        LazyCompile: ~readFileAfterStat fs.js:294:27
+     68    3.3%      /usr/bin/node
+      4    5.9%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      4  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      2   50.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:409:17
+      2   50.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      4    5.9%        LazyCompile: ~mergeSource /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      3   75.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   66.7%            LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1   33.3%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1   25.0%          LazyCompile: ~createFunctionContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:216:56
+      1  100.0%            LazyCompile: ~compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      4    5.9%        LazyCompile: ~FastBuffer internal/buffer.js:957:14
+      4  100.0%          LazyCompile: ~createUnsafeBuffer buffer.js:153:28
+      3   75.0%            LazyCompile: ~allocUnsafeSlow buffer.js:396:50
+      1   25.0%            LazyCompile: ~createPool buffer.js:162:20
+      4    5.9%        LazyCompile: *parse /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/minimatch/minimatch.js:413:9
+      4  100.0%          /usr/bin/node
+      4  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/minimatch/minimatch.js:222:19
+      4    5.9%        LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:251:47
+      4  100.0%          LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      4  100.0%            LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+      3    4.4%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:251:47
+      3  100.0%          LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      2   66.7%            LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+      1   33.3%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:30:40
+      3    4.4%        LazyCompile: *setupParams /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      3  100.0%          LazyCompile: *setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      3  100.0%            LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      3    4.4%        LazyCompile: *quotedString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      3  100.0%          LazyCompile: ~pushSource /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      3  100.0%            LazyCompile: ~append /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      2    2.9%        LazyCompile: ~stat internal/modules/cjs/loader.js:146:14
+      2  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      2    2.9%        LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      1   50.0%          LazyCompile: ~trySelf internal/modules/cjs/loader.js:409:17
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1   50.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      2    2.9%        LazyCompile: ~quotedString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      2  100.0%          LazyCompile: ~pushSource /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      2  100.0%            LazyCompile: ~appendEscaped /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      2    2.9%        LazyCompile: ~prepareStackTrace internal/errors.js:81:27
+      2  100.0%          /usr/bin/node
+      2  100.0%            LazyCompile: ~addCodeToName internal/errors.js:166:61
+      2    2.9%        LazyCompile: ~pipe /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/send/index.js:510:43
+      2  100.0%          LazyCompile: ~serveStatic /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/serve-static/index.js:72:31
+      1   50.0%            LazyCompile: ~handle /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/layer.js:86:49
+      1   50.0%            LazyCompile: *trim_prefix /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:288:23
+      2    2.9%        LazyCompile: ~checkInvalidHeaderChar _http_common.js:231:32
+      2  100.0%          LazyCompile: ~<anonymous> _http_outgoing.js:549:45
+      2  100.0%            LazyCompile: ~setHeader _http_outgoing.js:559:57
+      2    2.9%        LazyCompile: ~Glob._processReaddir2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:375:44
+      2  100.0%          LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:370:43
+      2  100.0%            LazyCompile: ~RES /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/inflight/inflight.js:18:28
+      2    2.9%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/minimatch/minimatch.js:222:19
+      2  100.0%          /usr/bin/node
+      2  100.0%            LazyCompile: ~make /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/minimatch/minimatch.js:188:8
+      1    1.5%        LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:986:18
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    1.5%        LazyCompile: ~translatePeerCertificate _tls_common.js:312:69
+      1  100.0%          LazyCompile: ~translatePeerCertificate _tls_common.js:312:69
+      1  100.0%            LazyCompile: ~TLSSocket.getPeerCertificate _tls_wrap.js:977:50
+      1    1.5%        LazyCompile: ~toUSVString internal/util.js:53:21
+      1  100.0%          LazyCompile: ~set internal/url.js:650:8
+      1  100.0%            /usr/bin/node
+      1    1.5%        LazyCompile: ~resolve path.js:1067:10
+      1  100.0%          LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      1  100.0%            LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      1    1.5%        LazyCompile: ~onParserExecuteCommon _http_server.js:666:31
+      1  100.0%          LazyCompile: ~onParserExecute _http_server.js:609:25
+      1    1.5%        LazyCompile: ~objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      1  100.0%          LazyCompile: ~objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+      1  100.0%            LazyCompile: ~setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1    1.5%        LazyCompile: ~normalize path.js:1103:12
+      1  100.0%          LazyCompile: ~join path.js:1142:7
+      1  100.0%            LazyCompile: ~pipe /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/send/index.js:510:43
+      1    1.5%        LazyCompile: ~next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%          LazyCompile: ~lex /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1  100.0%            LazyCompile: ~lex /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      1    1.5%        LazyCompile: ~match /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/layer.js:110:39
+      1  100.0%          LazyCompile: ~matchLayer /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:578:20
+      1  100.0%            LazyCompile: ~next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:176:16
+      1    1.5%        LazyCompile: ~isNextWhitespace /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:165:26
+      1  100.0%          LazyCompile: ~WhitespaceControl.Program /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      1  100.0%            LazyCompile: ~accept /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/visitor.js:57:26
+      1    1.5%        LazyCompile: ~getOwn internal/bootstrap/loaders.js:154:16
+      1  100.0%          LazyCompile: ~syncExports internal/bootstrap/loaders.js:261:14
+      1  100.0%            LazyCompile: ~<anonymous> internal/bootstrap/loaders.js:247:15
+      1    1.5%        LazyCompile: ~finish /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/common.js:122:17
+      1  100.0%          LazyCompile: ~Glob._finish /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:185:35
+      1  100.0%            LazyCompile: ~done /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:171:17
+      1    1.5%        LazyCompile: ~deserializeObject /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserialize /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/bson.js:162:21
+      1    1.5%        LazyCompile: ~Module._nodeModulePaths internal/modules/cjs/loader.js:597:37
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    1.5%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    1.5%        LazyCompile: ~Connection.openUri /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongoose/lib/connection.js:675:40
+      1  100.0%          LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongoose/lib/index.js:341:49
+      1  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:22
+      1    1.5%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/dotenv/lib/main.js:74:42
+      1  100.0%          /usr/bin/node
+      1  100.0%            LazyCompile: ~config /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/dotenv/lib/main.js:55:17
+      1    1.5%        LazyCompile: *setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1  100.0%          LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    1.5%        LazyCompile: *parse /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%          LazyCompile: ~parseWithoutProcessing /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    1.5%        LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%            LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1    1.5%        LazyCompile: *appendEscaped /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1    1.5%        Eval: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongoose/lib/aggregate.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+     52    2.6%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+     47   90.4%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      4    8.5%          Eval: ~<anonymous> stream.js:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3    6.4%          Eval: ~<anonymous> internal/cluster/master.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3    6.4%          Eval: ~<anonymous> crypto.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    4.3%          Eval: ~<anonymous> tls.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    4.3%          Eval: ~<anonymous> internal/url.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    4.3%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    4.3%          Eval: ~<anonymous> events.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    4.3%          Eval: ~<anonymous> _http_client.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          LazyCompile: ~setupProcessObject internal/bootstrap/node.js:273:28
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.1%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:254:32
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.1%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:302:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.1%          LazyCompile: ~readFile fs.js:319:18
+      1  100.0%            LazyCompile: ~go$readFile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/graceful-fs/graceful-fs.js:117:26
+      1    2.1%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:427:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1    2.1%          LazyCompile: ~get dns.js:333:8
+      1  100.0%            /usr/bin/node
+      1    2.1%          LazyCompile: ~get BlockList net.js:1775:16
+      1  100.0%            /usr/bin/node
+      1    2.1%          LazyCompile: ~createGlobalConsole internal/bootstrap/node.js:319:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.1%          Eval: ~<anonymous> timers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/timers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/streams/readable.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/process/task_queues.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/modules/esm/resolve.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/modules/esm/module_map.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/modules/cjs/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/fs/promises.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/child_process.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> internal/bootstrap/switches/is_main_thread.js:1:1
+      1    2.1%          Eval: ~<anonymous> internal/blob.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> http.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> fs.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> cluster.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> assert.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> _http_server.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.1%          Eval: ~<anonymous> _http_agent.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      5    9.6%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      5  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:43:26
+      4   80.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1   20.0%            LazyCompile: ~builtinStrategy internal/modules/esm/translators.js:279:58
+     52    2.6%      LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     49   94.2%        LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     48   98.0%          LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     45   93.8%            LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+      3    6.3%            LazyCompile: ~SourceNode_toString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:318:61
+      1    2.0%          LazyCompile: ~SourceNode_toString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:318:61
+      1  100.0%            /usr/bin/node
+      3    5.8%        LazyCompile: ~SourceNode_toString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:318:61
+      3  100.0%          /usr/bin/node
+      3  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     50    2.5%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+     50  100.0%        LazyCompile: ~Socket._writeGeneric net.js:772:42
+     50  100.0%          LazyCompile: ~Socket._writev net.js:804:36
+     50  100.0%            LazyCompile: ~doWrite internal/streams/writable.js:367:17
+     44    2.2%      LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     29   65.9%        LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+     29  100.0%          LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+     29  100.0%            LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+     15   34.1%        LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+     15  100.0%          LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+     15  100.0%            LazyCompile: ~ExpressHandlebars._renderTemplate /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:321:60
+     42    2.1%      LazyCompile: ~alphasort /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/common.js:19:20
+     42  100.0%        /usr/bin/node
+     42  100.0%          LazyCompile: ~finish /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/common.js:122:17
+     42  100.0%            LazyCompile: ~Glob._finish /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:185:35
+     38    1.9%      LazyCompile: ~readdir fs.js:1020:17
+     38  100.0%        LazyCompile: ~Glob._readdir /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:525:36
+     33   86.8%          LazyCompile: ~Glob._readdirInGlobStar /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:492:46
+     25   75.8%            LazyCompile: ~Glob._readdir /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:525:36
+      8   24.2%            LazyCompile: *Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+      3    7.9%          LazyCompile: *Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+      3  100.0%            LazyCompile: ~Glob /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:117:15
+      2    5.3%          LazyCompile: ~Glob._processGlobStar /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:623:44
+      2  100.0%            LazyCompile: ~Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+     35    1.7%      LazyCompile: ~readFile fs.js:319:18
+     35  100.0%        LazyCompile: ~go$readFile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/graceful-fs/graceful-fs.js:117:26
+     35  100.0%          LazyCompile: ~readFile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/graceful-fs/graceful-fs.js:111:21
+     35  100.0%            LazyCompile: ~<anonymous> internal/util.js:339:24
+     33    1.6%      LazyCompile: *wrap /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+      7   21.2%        LazyCompile: *generateList /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+      4   57.1%          LazyCompile: *setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      4  100.0%            LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      3   42.9%          LazyCompile: ~objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      3  100.0%            LazyCompile: ~objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+      7   21.2%        LazyCompile: *appendEscaped /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      7  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      4   57.1%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      3   42.9%            LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      5   15.2%        LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      5  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3   60.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      2   40.0%            LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      3    9.1%        LazyCompile: ~push /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:868:22
+      2   66.7%          LazyCompile: ~replaceStack /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      2  100.0%            LazyCompile: ~resolvePath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1   33.3%          LazyCompile: ~invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            LazyCompile: ~compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2    6.1%        LazyCompile: *replaceStack /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1   50.0%          LazyCompile: ~resolvePath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1  100.0%            LazyCompile: ~lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1   50.0%          LazyCompile: ~append /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2    6.1%        LazyCompile: *push /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:868:22
+      1   50.0%          LazyCompile: ~replaceStack /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1  100.0%            LazyCompile: ~resolvePath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1   50.0%          LazyCompile: ~invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2    6.1%        LazyCompile: *lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      2  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2  100.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      2    6.1%        LazyCompile: *castChunk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+      2  100.0%          LazyCompile: *wrap /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+      2  100.0%            LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1    3.0%        LazyCompile: ~prepend /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:76:28
+      1  100.0%          LazyCompile: ~mergeSource /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      1  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    3.0%        LazyCompile: *resolvePath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1  100.0%          LazyCompile: ~lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    3.0%        LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%            LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+     32    1.6%      LazyCompile: *next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     32  100.0%        LazyCompile: *parse /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     32  100.0%          LazyCompile: ~parseWithoutProcessing /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+     20   62.5%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+     12   37.5%            LazyCompile: ~parse /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+     25    1.2%      LazyCompile: ~info file:///home/leopoldo/CoderHouse/backend/backend_entregables/clase%2016%20-%20Logs%20debug%20profiling/src/controllers/info.controllers.js:6:21
+     25  100.0%        LazyCompile: ~handle /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/layer.js:86:49
+     25  100.0%          LazyCompile: ~next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/route.js:114:16
+     25  100.0%            LazyCompile: ~dispatch /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/route.js:98:45
+     24    1.2%      LazyCompile: ~stat fs.js:1078:14
+     24  100.0%        LazyCompile: ~sendFile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/send/index.js:716:51
+     24  100.0%          LazyCompile: ~pipe /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/send/index.js:510:43
+     24  100.0%            LazyCompile: ~serveStatic /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/serve-static/index.js:72:31
+     22    1.1%      LazyCompile: ~slice buffer.js:609:12
+      9   40.9%        LazyCompile: ~toString buffer.js:798:46
+      6   66.7%          LazyCompile: ~readFileAfterClose internal/fs/read_file_context.js:49:28
+      2   22.2%          LazyCompile: ~readFileSync fs.js:391:22
+      2  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1   11.1%          LazyCompile: ~deserializeObject /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            LazyCompile: ~deserialize /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/deserializer.js:36:21
+      8   36.4%        LazyCompile: *toString buffer.js:798:46
+      8  100.0%          LazyCompile: ~readFileAfterClose internal/fs/read_file_context.js:49:28
+      5   22.7%        LazyCompile: *readFileAfterClose internal/fs/read_file_context.js:49:28
+     22    1.1%      LazyCompile: ~compression /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/compression/index.js:59:31
+     15   68.2%        LazyCompile: *trim_prefix /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:288:23
+     15  100.0%          LazyCompile: *next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:176:16
+     15  100.0%            LazyCompile: ~error /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/serve-static/index.js:115:39
+      7   31.8%        LazyCompile: ~handle /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/layer.js:86:49
+      7  100.0%          LazyCompile: ~trim_prefix /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:288:23
+      4   57.1%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:275:64
+      3   42.9%            LazyCompile: *next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/index.js:176:16
+     22    1.1%      LazyCompile: *setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+     22  100.0%        LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+     22  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     20   90.9%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      2    9.1%            LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+     60    1.6%    LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     59   98.3%      LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     58   98.3%        LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     48   82.8%          LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     33   68.8%            LazyCompile: *SourceNode_walk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:221:53
+     15   31.3%            LazyCompile: ~SourceNode_toString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:318:61
+     10   17.2%          LazyCompile: ~SourceNode_toString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:318:61
+     10  100.0%            /usr/bin/node
+      1    1.7%        LazyCompile: ~SourceNode_toString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:318:61
+      1  100.0%          /usr/bin/node
+      1  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    1.7%      LazyCompile: ~SourceNode_toString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/source-map/lib/source-node.js:318:61
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+
+    215    4.3%  __write
+    156   72.6%    /usr/bin/node
+     18   11.5%      /usr/bin/node
+      4   22.2%        LazyCompile: ~next /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      4  100.0%          LazyCompile: ~lex /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      4  100.0%            LazyCompile: ~lex /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      1    5.6%        LazyCompile: ~toUSVString internal/util.js:53:21
+      1  100.0%          LazyCompile: ~set internal/url.js:650:8
+      1  100.0%            /usr/bin/node
+      1    5.6%        LazyCompile: ~resolveBSONOptions /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/bson.js:53:28
+      1  100.0%          LazyCompile: ~resolveOptions /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/utils.js:739:24
+      1  100.0%            LazyCompile: ~createIndex /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/collection.js:254:16
+      1    5.6%        LazyCompile: ~parseEncoding /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/negotiator/lib/encoding.js:69:23
+      1  100.0%          LazyCompile: ~parseAcceptEncoding /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/negotiator/lib/encoding.js:31:29
+      1  100.0%            LazyCompile: ~preferredEncodings /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/negotiator/lib/encoding.js:138:28
+      1    5.6%        LazyCompile: ~make /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/minimatch/minimatch.js:188:8
+      1  100.0%          LazyCompile: ~Minimatch /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/minimatch/minimatch.js:163:15
+      1  100.0%            LazyCompile: ~setopts /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/common.js:48:18
+      1    5.6%        LazyCompile: ~lookupProperty /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:118:44
+      1  100.0%          Eval: ~<anonymous> :1:20
+      1  100.0%            LazyCompile: ~main /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:207:18
+      1    5.6%        LazyCompile: ~isPrevWhitespace /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:148:26
+      1  100.0%          LazyCompile: ~WhitespaceControl.Program /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      1  100.0%            LazyCompile: ~accept /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/visitor.js:57:26
+      1    5.6%        LazyCompile: ~header /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/response.js:759:29
+      1  100.0%          LazyCompile: ~send /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: ~done /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/response.js:1011:27
+      1    5.6%        LazyCompile: ~createProtoAccessControl /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/internal/proto-access.js:19:34
+      1  100.0%          LazyCompile: ~ret._setup /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:217:25
+      1  100.0%            LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:188:15
+      1    5.6%        LazyCompile: ~checkCollectionName /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/utils.js:22:29
+      1  100.0%          LazyCompile: ~Collection /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/collection.js:65:16
+      1  100.0%            LazyCompile: ~collection /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/db.js:192:15
+      1    5.6%        LazyCompile: ~ServerDescription /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/server_description.js:34:16
+      1  100.0%          LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/server.js:62:55
+      1  100.0%            LazyCompile: ~emit events.js:349:44
+      1    5.6%        LazyCompile: ~Mime.lookup /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mime/mime.js:69:33
+      1  100.0%          LazyCompile: ~contentType /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/response.js:599:32
+      1  100.0%            LazyCompile: ~send /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/response.js:107:25
+      1    5.6%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongoose/lib/helpers/pluralize.js:86:34
+      1  100.0%          /usr/bin/node
+      1  100.0%            LazyCompile: ~pluralize /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongoose/lib/helpers/pluralize.js:82:19
+      1    5.6%        Eval: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mquery/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      2    1.3%      Script: ~<anonymous> file:///home/leopoldo/CoderHouse/backend/backend_entregables/clase%2016%20-%20Logs%20debug%20profiling/src/functions/logger.js:1:1
+      2  100.0%        /usr/bin/node
+      2  100.0%          /usr/bin/node
+      2  100.0%            LazyCompile: ~run internal/modules/esm/module_job.js:178:12
+      2    1.3%      LazyCompile: ~writeCommand /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/message_stream.js:35:17
+      2  100.0%        LazyCompile: ~write /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connection.js:513:15
+      2  100.0%          LazyCompile: ~command /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connection.js:247:12
+      2  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connect.js:78:43
+      2    1.3%      LazyCompile: ~serverUpdateHandler /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/topology.js:372:24
+      2  100.0%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/topology.js:535:53
+      2  100.0%          LazyCompile: *emit events.js:349:44
+      2  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/server.js:62:55
+      2    1.3%      LazyCompile: ~serializeInto /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/serializer.js:550:23
+      1   50.0%        LazyCompile: ~serializeObject /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/serializer.js:258:25
+      1  100.0%          LazyCompile: ~serializeInto /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            LazyCompile: ~serialize /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/bson.js:111:19
+      1   50.0%        LazyCompile: ~serialize /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/bson.js:111:19
+      1  100.0%          LazyCompile: ~toBin /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/commands.js:82:10
+      1  100.0%            LazyCompile: ~writeCommand /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/message_stream.js:35:17
+      2    1.3%      LazyCompile: ~onMessage /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connection.js:152:14
+      2  100.0%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connection.js:63:44
+      2  100.0%          LazyCompile: ~emit events.js:349:44
+      2  100.0%            LazyCompile: ~processIncomingData /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      2    1.3%      LazyCompile: ~deserializeObject /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/deserializer.js:65:27
+      2  100.0%        LazyCompile: ~deserializeObject /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/deserializer.js:65:27
+      2  100.0%          LazyCompile: ~deserialize /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/parser/deserializer.js:36:21
+      2  100.0%            LazyCompile: ~deserialize /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/bson/lib/bson.js:162:21
+      2    1.3%      LazyCompile: ~connect _tls_wrap.js:1582:35
+      2  100.0%        LazyCompile: ~makeConnection /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connect.js:241:24
+      2  100.0%          LazyCompile: ~connect /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connect.js:30:17
+      2  100.0%            LazyCompile: ~checkServer /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/monitor.js:139:21
+
+    199    4.0%  __pthread_cond_signal
+     91   45.7%    LazyCompile: *readFile fs.js:319:18
+     91  100.0%      LazyCompile: ~go$readFile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/graceful-fs/graceful-fs.js:117:26
+     91  100.0%        LazyCompile: ~readFile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/graceful-fs/graceful-fs.js:111:21
+     91  100.0%          LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:368:47
+     91  100.0%            LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+     37   18.6%    LazyCompile: *Glob._readdir /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:525:36
+     26   70.3%      LazyCompile: ~Glob._readdirInGlobStar /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:492:46
+     26  100.0%        LazyCompile: *Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+     23   88.5%          LazyCompile: *Glob._processGlobStar2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:631:45
+     23  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:625:43
+      3   11.5%          LazyCompile: ~Glob._processGlobStar2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:631:45
+      3  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:625:43
+     11   29.7%      LazyCompile: *Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+     11  100.0%        LazyCompile: ~Glob /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:117:15
+     11  100.0%          LazyCompile: ~glob /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:62:15
+      6   54.5%            LazyCompile: *<anonymous> internal/util.js:339:24
+      5   45.5%            LazyCompile: ~<anonymous> internal/util.js:339:24
+     35   17.6%    LazyCompile: *readFileAfterStat fs.js:294:27
+     17    8.5%    LazyCompile: *read internal/fs/read_file_context.js:88:7
+     17  100.0%      LazyCompile: ~readFileAfterStat fs.js:294:27
+      9    4.5%    LazyCompile: *readFileAfterOpen fs.js:278:27
+      2    1.0%    /usr/bin/node
+      1   50.0%      LazyCompile: ~pushStackLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:877:46
+      1  100.0%        LazyCompile: ~pushContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:437:36
+      1  100.0%          LazyCompile: ~lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1  100.0%            LazyCompile: ~compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   50.0%      LazyCompile: ~Glob._processGlobStar2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:631:45
+      1  100.0%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:625:43
+      1  100.0%          LazyCompile: ~RES /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/inflight/inflight.js:18:28
+      1  100.0%            LazyCompile: ~f /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/once/once.js:22:20
+
+    104    2.1%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     83   79.8%    /usr/bin/node
+     15   18.1%      LazyCompile: ~alphasort /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/common.js:19:20
+     15  100.0%        /usr/bin/node
+     15  100.0%          LazyCompile: ~finish /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/common.js:122:17
+     15  100.0%            LazyCompile: ~Glob._finish /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:185:35
+     12   14.5%      /usr/bin/node
+      3   25.0%        LazyCompile: *quotedString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      2   66.7%          LazyCompile: ~quotedString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:998:38
+      2  100.0%            LazyCompile: ~setupParams /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      1   33.3%          LazyCompile: ~pushSource /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            LazyCompile: ~appendEscaped /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      2   16.7%        LazyCompile: *parse /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      2  100.0%          LazyCompile: ~parseWithoutProcessing /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      2  100.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      2   16.7%        LazyCompile: *appendEscaped /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      2  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2  100.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    8.3%        LazyCompile: ~quotedString /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      1  100.0%          LazyCompile: ~pushSource /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            LazyCompile: ~append /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1    8.3%        LazyCompile: ~getset /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/color/index.js:431:16
+      1  100.0%          Eval: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/color/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1    8.3%        LazyCompile: ~FastBuffer internal/buffer.js:957:14
+      1  100.0%          LazyCompile: ~createUnsafeBuffer buffer.js:153:28
+      1  100.0%            LazyCompile: ~allocUnsafeSlow buffer.js:396:50
+      1    8.3%        LazyCompile: *setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1  100.0%          LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    8.3%        LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      6    7.2%      LazyCompile: *createUnsafeBuffer buffer.js:153:28
+      4   66.7%        LazyCompile: ~allocUnsafeSlow buffer.js:396:50
+      4  100.0%          LazyCompile: ~readFileAfterStat fs.js:294:27
+      2   33.3%        LazyCompile: ~createPool buffer.js:162:20
+      2  100.0%          LazyCompile: ~fromStringFast buffer.js:426:24
+      2  100.0%            LazyCompile: ~fromString buffer.js:445:20
+      3    3.6%      LazyCompile: *setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      3  100.0%        LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      3  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3  100.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      3    3.6%      LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   66.7%        LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%          LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2  100.0%            LazyCompile: ~ExpressHandlebars._renderTemplate /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:321:60
+      1   33.3%        LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%          LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1  100.0%            LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+      3    3.6%      LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:167:47
+      3  100.0%        LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      2   66.7%          LazyCompile: *ExpressHandlebars.getTemplate /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:162:56
+      2  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:208:81
+      1   33.3%          LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%            LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      2    2.4%      LazyCompile: ~SubExpression /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      2  100.0%        LazyCompile: ~MustacheStatement /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1   50.0%          LazyCompile: ~accept /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1  100.0%            LazyCompile: ~Program /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:113:28
+      1   50.0%          LazyCompile: *accept /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1  100.0%            LazyCompile: ~Program /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:113:28
+      2    2.4%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      2  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:816:35
+      2  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      2  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      2    2.4%      LazyCompile: *opcode /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:347:26
+      1   50.0%        LazyCompile: ~ambiguousSexpr /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:248:42
+      1  100.0%          LazyCompile: ~SubExpression /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      1  100.0%            LazyCompile: ~MustacheStatement /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1   50.0%        LazyCompile: ~PathExpression /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      1  100.0%          LazyCompile: ~accept /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1  100.0%            LazyCompile: ~ambiguousSexpr /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:248:42
+      2    2.4%      LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:368:47
+      2  100.0%        LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      2  100.0%          LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:167:47
+      2  100.0%            LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1    1.2%      LazyCompile: ~writeHead _http_server.js:254:19
+      1  100.0%        LazyCompile: ~writeHead /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/on-headers/index.js:28:29
+      1  100.0%          LazyCompile: ~_implicitHeader _http_server.js:249:68
+      1  100.0%            LazyCompile: ~end /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/compression/index.js:92:28
+      1    1.2%      LazyCompile: ~setUnrefTimeout internal/timers.js:370:25
+      1  100.0%        LazyCompile: ~setStreamTimeout internal/stream_base_commons.js:243:26
+      1  100.0%          LazyCompile: ~makeConnection /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connect.js:241:24
+      1  100.0%            LazyCompile: ~connect /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1    1.2%      LazyCompile: ~readFileAfterStat fs.js:294:27
+      1    1.2%      LazyCompile: ~processWaitQueue /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/topology.js:589:26
+      1  100.0%        LazyCompile: ~selectServer /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/topology.js:279:17
+      1  100.0%          LazyCompile: ~connect /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/topology.js:171:12
+      1  100.0%            LazyCompile: ~createTopology /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/operations/connect.js:44:24
+      1    1.2%      LazyCompile: ~prepareStackTrace internal/errors.js:81:27
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~addCodeToName internal/errors.js:166:61
+      1  100.0%            LazyCompile: ~NodeError internal/errors.js:309:16
+      1    1.2%      LazyCompile: ~parserOnHeadersComplete _http_common.js:76:33
+      1    1.2%      LazyCompile: ~ownProp /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/common.js:9:18
+      1  100.0%        LazyCompile: *Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+      1  100.0%          LazyCompile: ~Glob._processGlobStar2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:631:45
+      1  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:625:43
+      1    1.2%      LazyCompile: ~onParseComplete internal/url.js:250:25
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~URL internal/url.js:338:14
+      1  100.0%            LazyCompile: ~pathToFileURL internal/url.js:1408:23
+      1    1.2%      LazyCompile: ~createTopology /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/operations/connect.js:44:24
+      1  100.0%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/operations/connect.js:32:67
+      1  100.0%          LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/connection_string.js:72:39
+      1  100.0%            LazyCompile: ~onresolve dns.js:204:19
+      1    1.2%      LazyCompile: ~createDebug /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mquery/node_modules/debug/src/common.js:60:22
+      1  100.0%        Eval: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mquery/lib/mquery.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    1.2%      LazyCompile: ~create /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars.runtime.js:40:16
+      1  100.0%        Eval: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars.runtime.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    1.2%      LazyCompile: ~connect _tls_wrap.js:1582:35
+      1  100.0%        LazyCompile: ~makeConnection /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connect.js:241:24
+      1  100.0%          LazyCompile: ~connect /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1  100.0%            LazyCompile: ~measureRoundTripTime /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/monitor.js:280:30
+      1    1.2%      LazyCompile: ~compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:490:17
+      1  100.0%        LazyCompile: ~hb.compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars.js:38:25
+      1  100.0%          LazyCompile: ~ExpressHandlebars._compileTemplate /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:313:61
+      1  100.0%            LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:181:44
+      1    1.2%      LazyCompile: ~command /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1  100.0%        LazyCompile: ~measureRoundTripTime /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/monitor.js:280:30
+      1  100.0%          LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/sdam/monitor.js:296:44
+      1  100.0%            LazyCompile: ~listOnTimeout internal/timers.js:505:25
+      1    1.2%      LazyCompile: ~classifySexpr /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:363:40
+      1  100.0%        LazyCompile: ~SubExpression /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      1  100.0%          LazyCompile: ~MustacheStatement /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1  100.0%            LazyCompile: ~accept /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1    1.2%      LazyCompile: ~captureLargerStackTrace internal/errors.js:409:35
+      1  100.0%        LazyCompile: ~addCodeToName internal/errors.js:166:61
+      1  100.0%          LazyCompile: ~NodeError internal/errors.js:309:16
+      1  100.0%            LazyCompile: ~onParseError internal/url.js:269:22
+      1    1.2%      LazyCompile: ~arrayClone events.js:757:20
+      1  100.0%        LazyCompile: *emit events.js:349:44
+      1  100.0%          LazyCompile: ~endReadableNT internal/streams/readable.js:1326:23
+      1  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:67:35
+      1    1.2%      LazyCompile: ~addListener events.js:496:58
+      1  100.0%        LazyCompile: ~Glob /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:117:15
+      1  100.0%          LazyCompile: ~glob /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:62:15
+      1  100.0%            LazyCompile: ~<anonymous> internal/util.js:339:24
+      1    1.2%      LazyCompile: ~_send _http_outgoing.js:307:49
+      1  100.0%        LazyCompile: ~write_ _http_outgoing.js:704:16
+      1  100.0%          LazyCompile: ~end _http_outgoing.js:795:45
+      1  100.0%            LazyCompile: ~end /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/compression/index.js:92:28
+      1    1.2%      LazyCompile: ~Glob._readdirError /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:581:41
+      1  100.0%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:551:19
+      1  100.0%          LazyCompile: ~<anonymous> fs.js:180:10
+      1    1.2%      LazyCompile: ~Glob._readdirEntries /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:559:43
+      1  100.0%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:551:19
+      1  100.0%          LazyCompile: ~<anonymous> fs.js:180:10
+      1    1.2%      LazyCompile: ~Glob._processGlobStar2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:631:45
+      1  100.0%        LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:625:43
+      1  100.0%          LazyCompile: ~RES /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/inflight/inflight.js:18:28
+      1  100.0%            LazyCompile: ~f /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/once/once.js:22:20
+      1    1.2%      LazyCompile: ~Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+      1  100.0%        LazyCompile: ~Glob._processGlobStar2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:631:45
+      1  100.0%          LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:625:43
+      1  100.0%            LazyCompile: ~RES /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/inflight/inflight.js:18:28
+      1    1.2%      LazyCompile: ~<anonymous> _tls_common.js:207:37
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~createSecureContext _tls_common.js:95:59
+      1  100.0%            LazyCompile: ~connect _tls_wrap.js:1582:35
+      1    1.2%      LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:625:43
+      1  100.0%        LazyCompile: *RES /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/inflight/inflight.js:18:28
+      1  100.0%          LazyCompile: ~f /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/once/once.js:22:20
+      1  100.0%            LazyCompile: *RES /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/inflight/inflight.js:18:28
+      1    1.2%      LazyCompile: *readFileAfterStat fs.js:294:27
+      1    1.2%      LazyCompile: *module.exports /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/utils-merge/index.js:16:36
+      1  100.0%        LazyCompile: ~render /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/application.js:531:29
+      1  100.0%          LazyCompile: ~render /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/response.js:994:29
+      1  100.0%            LazyCompile: ~info file:///home/leopoldo/CoderHouse/backend/backend_entregables/clase%2016%20-%20Logs%20debug%20profiling/src/controllers/info.controllers.js:6:21
+      1    1.2%      LazyCompile: *join path.js:1142:7
+      1  100.0%        LazyCompile: ~pipe /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/send/index.js:510:43
+      1  100.0%          LazyCompile: ~serveStatic /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/serve-static/index.js:72:31
+      1  100.0%            LazyCompile: ~handle /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express/lib/router/layer.js:86:49
+      1    1.2%      LazyCompile: *PathExpression /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      1  100.0%        LazyCompile: *SubExpression /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      1  100.0%          LazyCompile: ~MustacheStatement /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1  100.0%            LazyCompile: *Program /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:113:28
+      1    1.2%      LazyCompile: *Glob._readdir /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:525:36
+      1  100.0%        LazyCompile: *Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+      1  100.0%          LazyCompile: ~Glob /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:117:15
+      1  100.0%            LazyCompile: ~glob /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:62:15
+      1    1.2%      LazyCompile: *Glob._process /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:295:36
+      1  100.0%        LazyCompile: *Glob._processGlobStar2 /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:631:45
+      1  100.0%          LazyCompile: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/glob/glob.js:625:43
+      1  100.0%            LazyCompile: *RES /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/inflight/inflight.js:18:28
+      1    1.2%      LazyCompile: *<anonymous> :1:20
+      1  100.0%        LazyCompile: ~main /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:207:18
+      1  100.0%          LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/runtime.js:188:15
+      1  100.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    1.2%      Eval: ~<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/mongodb/lib/connection_string.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+
+     70    1.4%  epoll_pwait
+
+     55    1.1%  LazyCompile: *wrap /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+     22   40.0%    LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+     22  100.0%      LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     12   54.5%        LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+     12  100.0%          LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+     12  100.0%            LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+     10   45.5%        LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+     10  100.0%          LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+     10  100.0%            LazyCompile: ~ExpressHandlebars._renderTemplate /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:321:60
+      8   14.5%    LazyCompile: *lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      8  100.0%      LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      8  100.0%        LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      8  100.0%          LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      8  100.0%            LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+      5    9.1%    LazyCompile: *resolvePath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      5  100.0%      LazyCompile: ~lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      5  100.0%        LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      5  100.0%          LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      5  100.0%            LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      5    9.1%    LazyCompile: *push /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:868:22
+      3   60.0%      LazyCompile: ~replaceStack /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      3  100.0%        LazyCompile: ~resolvePath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      3  100.0%          LazyCompile: ~lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      3  100.0%            LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   40.0%      LazyCompile: ~invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      2  100.0%        LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2  100.0%          LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%            LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      4    7.3%    LazyCompile: *appendEscaped /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      4  100.0%      LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   50.0%        LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%          LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2  100.0%            LazyCompile: ~ExpressHandlebars._renderTemplate /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:321:60
+      2   50.0%        LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      2  100.0%          LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      2  100.0%            LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+      3    5.5%    LazyCompile: *generateList /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+      2   66.7%      LazyCompile: ~objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      2  100.0%        LazyCompile: ~objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+      2  100.0%          LazyCompile: ~setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      2  100.0%            LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1   33.3%      LazyCompile: *setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1  100.0%        LazyCompile: *invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      3    5.5%    LazyCompile: *castChunk /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+      2   66.7%      LazyCompile: ~generateList /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+      2  100.0%        LazyCompile: ~objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      2  100.0%          LazyCompile: ~objectLiteral /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+      2  100.0%            LazyCompile: ~setupHelperArgs /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1   33.3%      LazyCompile: *wrap /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+      1  100.0%        LazyCompile: *lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      2    3.6%    LazyCompile: *replaceStack /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1   50.0%      LazyCompile: ~resolvePath /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1  100.0%        LazyCompile: ~lookupOnContext /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1  100.0%          LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1   50.0%      LazyCompile: ~append /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1  100.0%        LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%            LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1    1.8%    LazyCompile: ~functionCall /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:113:38
+      1  100.0%      LazyCompile: ~invokeAmbiguous /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%        LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1    1.8%    LazyCompile: ~appendToBuffer /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:42:42
+      1  100.0%      LazyCompile: ~appendEscaped /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%        LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: ~compileInput /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            LazyCompile: ~ret /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1    1.8%    LazyCompile: *compile /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%      LazyCompile: *<anonymous> /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%        LazyCompile: *step /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1  100.0%          LazyCompile: *fulfilled /home/leopoldo/CoderHouse/backend/backend_entregables/clase 16 - Logs debug profiling/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+

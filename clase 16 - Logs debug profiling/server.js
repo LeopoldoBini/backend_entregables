@@ -14,18 +14,15 @@ import compression from "compression";
 import logger from "./src/functions/logger.js";
 
 
-if (cluster.isMaster) {
+if (argvs.mode == "CLUSTER" && cluster.isMaster) {
     console.log(`Master ${process.pid} is running`);
-    if (argvs.mode == "CLUSTER") {
-        console.log(argvs.mode);
-        for (let i = 0; i < numCPUs; i++) {
-            cluster.fork();
-        }
+    for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
     }
-    else {
-        cluster.fork();
-    }
-
+    cluster.on("exit", (worker, code, signal) => {
+        console.log(`Worker PID ${worker.process.pid} died`);
+        cluster.fork()})
+    
 
 } else {
 
